@@ -228,7 +228,7 @@ public class TheLearningServlet extends HttpServlet {
         String htmlStr = "<html><head><link rel='stylesheet' "
                 + "href='styles/main.css' "
                 + "type='text/css'/><title>The Learning Servlet</title </head>"
-                + "<body><h1>" + methodName + "method</h2>"
+                + "<body><h1>" + methodName + "method</h1>"
                 + "<br/><br/>"
                 + "<form action = 'index.html'><label>Return to Home page</label>"
                 + "<br/><button class = 'button'>Return</button></form>"

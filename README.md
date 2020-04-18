@@ -18,7 +18,7 @@
 <li>you can  deploy a war file to your server</li>
 </ul>
 <p>The project is Maven based and so should load and run in any IDE that support Maven which should be all of them.</p>
-<p>It was written with Java 11 but it should run without any problem with Java 8. If you will be using Java 8 make sure you change the maven.compiler.source and the maven.compiler.target properties in the pom.xml file from 11 to 8.</p>
+<p>It was written with Java 11 but it should run without any problem with Java 1.8. If you will be using Java 1.8 make sure you change the maven.compiler.source and the maven.compiler.target properties in the pom.xml file from 11 to 1.8.</p>
 <p>Please don’t hesitate to let me know of any issues, bugs, or just plain wrongness on my part.</p>
 <p>Ken Fogel<br>
 Twitter: @omniprof<br>
