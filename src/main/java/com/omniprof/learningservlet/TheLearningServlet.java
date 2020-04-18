@@ -227,7 +227,7 @@ public class TheLearningServlet extends HttpServlet {
     private String createHTMLString(String methodName) {
         String htmlStr = "<html><head><link rel='stylesheet' "
                 + "href='styles/main.css' "
-                + "type='text/css'/><title>The Learning Servlet</title </head>"
+                + "type='text/css'/><title>The Learning Servlet</title></head>"
                 + "<body><h1>" + methodName + "method</h1>"
                 + "<br/><br/>"
                 + "<form action = 'index.html'><label>Return to Home page</label>"
