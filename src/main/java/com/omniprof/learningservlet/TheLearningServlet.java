@@ -1,4 +1,4 @@
-package com.omniprof.learningsevlet;
+package com.omniprof.learningservlet;
 
 /**
  * TheLearningServlet Web Application
