@@ -33,7 +33,7 @@ import org.apache.logging.log4j.Logger;
  * is expected of the servlet as it can discover what name was used to call it.
  *
  */
-@WebServlet(description = "Basic Servlet for learning", urlPatterns = {"/Learning"})
+@WebServlet(description = "Basic Servlet for learning", urlPatterns = {"/learning"})
 public class TheLearningServlet extends HttpServlet {
 
     // There is basic logging in servlets but I prefer the more robust log4j 
