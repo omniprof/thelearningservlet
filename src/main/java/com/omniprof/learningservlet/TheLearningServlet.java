@@ -6,6 +6,9 @@ package com.omniprof.learningservlet;
  * Prepared by Ken Fogel
  *
  * Twitter: @omniprof
+ *
+ * One bit of homework for you, look up what idempotent means. Then use it in a
+ * sentence
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -134,7 +137,18 @@ public class TheLearningServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        /**
+         * Output from a Servlet sent to a browser is similar to writing to the
+         * console. The HttpServletResponse object knows the path to the user's
+         * browser. You begin by declaring the data type. In this example its
+         * text/html. In a try-with-resources structure we create a PrintWriter
+         * object. With this you can now write to the user's browser. When the
+         * PrintWriter closes the text is sent to the browser.
+         *
+         * Note to pros: You do not have to explicitly flush the PrintWriter as
+         * some StackOverflow answers suggest. It flushes when the underlying
+         * Writer object has its close method called.
+         */
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter writer = response.getWriter()) {
             writer.print(createHTMLString("GET"));
@@ -158,7 +172,7 @@ public class TheLearningServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        // See doGet for understanding these lines
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter writer = response.getWriter()) {
             writer.print(createHTMLString("POST"));
@@ -184,6 +198,9 @@ public class TheLearningServlet extends HttpServlet {
      */
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // See doGet for understanding these lines
+        // One difference is that since this output can only be seen if you use 
+        // curl to call this method the content type is plain text
         response.setContentType("text/plain;charset=UTF-8");
         try ( PrintWriter writer = response.getWriter()) {
             writer.print("You have called doPut");
@@ -209,6 +226,9 @@ public class TheLearningServlet extends HttpServlet {
      */
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // See doGet for understanding these lines
+        // One difference is that since this output can only be seen if you use 
+        // curl to call this method the content type is plain text
         response.setContentType("text/plain;charset=UTF-8");
         try ( PrintWriter writer = response.getWriter()) {
             writer.print("You have called doDelete");
